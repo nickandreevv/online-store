@@ -1,0 +1,166 @@
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.drawer {
+  display: flex;
+  flex-direction: column;
+  padding: 30px;
+  position: absolute;
+  right: 0;
+  width: 420px;
+  height: 100%;
+  background: #ffffff;
+  box-shadow: -10px 4px 24px rgba(0, 0, 0, 0.1);
+
+  h2 {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    font-size: 24px;
+    margin-bottom: 20px;
+    img {
+      cursor: pointer;
+    }
+  }
+}
+.items {
+  overflow: auto;
+  margin-bottom: 40px;
+  flex: 1;
+}
+
+.cartItem {
+  display: flex;
+  align-items: center;
+  border: 1px solid #f3f3f3;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 20px;
+  margin-bottom: 20px;
+
+  p {
+    font-size: 16px;
+  }
+  b {
+    font-size: 14px;
+  }
+  .cartItem_image {
+    margin-right: 20px;
+  }
+  .cartItem_text {
+    margin-right: 20px;
+    flex: 1;
+  }
+  .cartItem_remove {
+    opacity: 0.5;
+    cursor: pointer;
+    transition: opacity 0.2 ease-in-out;
+
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .cartItem_img {
+    height: 70px;
+    width: 70px;
+    background-position: 0 -3px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-right: 20px;
+  }
+}
+.green_button {
+  width: 100%;
+  height: 55px;
+  background: #9dd558;
+  border-radius: 18px;
+  border: 0;
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 500;
+  svg {
+    margin-left: 20px;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.empty_card {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  .empty_card_image {
+    margin-bottom: 20px;
+    width: 120px;
+    height: 120px;
+  }
+  .green_button {
+    width: 245px;
+    margin-top: 20px;
+    &:hover {
+      img {
+        transform: rotate(180deg) translateX(3px);
+      }
+    }
+  }
+  .empty_card_p {
+    opacity: 0.6;
+    width: 240px;
+    margin-top: 10px;
+  }
+  .empty_card_img {
+    position: relative;
+    top: 1px;
+    transform: rotate(180deg);
+    margin-right: 15px;
+    transition: transform 0.15s ease-in-out;
+  }
+}
+
+.footer_block {
+  ul {
+    display: block;
+    margin-bottom: 40px !important;
+    .footer_menu {
+      display: flex;
+      align-items: flex-end;
+      margin-bottom: 20px;
+    }
+    div {
+      flex: 1;
+      border-bottom: 1px dashed #dfdfdf;
+      height: 1px;
+      position: relative;
+      top: -5px;
+      margin: 0 7px;
+    }
+  }
+  .green_button {
+    position: relative;
+    &:hover {
+      img {
+        transform: translateX(5px);
+      }
+    }
+    img {
+      position: absolute;
+      right: 30px;
+      top: 20px;
+      transition: transform 0.2s ease-in-out;
+    }
+  }
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
